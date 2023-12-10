@@ -1,0 +1,43 @@
+TASK 1
+
+pwd
+mkdir test1
+cd test1
+touch file1.txt file2.txt file3.txt
+ls
+cd ..
+mkdir test2
+rmdir test2
+rm test1/file2.txt
+mkdir test3
+touch test3/file4.txt test3/file5.txt
+rm -r test3
+mkdir test4
+mv test1/file1.txt test1/file3.txt test4
+echo -e "line1\nline2\nline3" >> test4/file1.txt
+cat test4/file1.txt
+echo -e "line4\nline5\nline6" >> test4/file3.txt
+cat test4/file1.txt test4/file3.txt
+nano test4/file1.txt
+cat test4/file1.txt
+
+TASK 2
+
+mkdir test3
+echo -e "row1\nrow2\nrow3\nrow4" >> test3/file4.txt
+echo -e "row1\nrow2\nrow3\nrow4" >> test3/file5.txt
+echo -e "row1\nrow2\nrow3\nrow4" >> test3/file6.txt
+grep -i "row2" test3/file5.txt
+grep -Ri "row" test3
+grep -c "row" test3/file6.txt
+find test3 -name "file5*"
+find test3 -name "file5*" -delete
+echo "test" >> test3/file4.txt
+sed "s/test/fail/g" test3/file4.txt -i
+echo test >> test3/file4.txt
+ps aux
+kill 666
+ping artsiomrusau.com
+ping -c 5 artsiomrusau.com
+curl https://petstore.swagger.io/v2/pet/findByStatus?status=available
+curl -X POST https://petstore.swagger.io/v2/user -H 'Content-Type: application/json' --data '{"id": 1337, "username": "bruh", "firstName": "John", "lastName": "Isner", "email": "john@testmail.com", "password": "password", "phone": "79999999999", "userStatus": 1}'
